@@ -14,7 +14,7 @@ RUN adduser --disabled-password --gecos "" node
 
 RUN curl -L https://github.com/jishi/node-sonos-http-api/archive/master.tar.gz | tar xz --strip-components=1 -C /app && \
     mkdir cache && \
-    ln -s settings/settings.json && \
+    ln -s settings/settings.js && \
     chown -R node:node static cache && \
     npm install --production && \
     rm -rf /tmp/* /root/.npm
